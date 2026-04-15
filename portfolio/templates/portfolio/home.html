@@ -1,0 +1,53 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<section class="hero">
+    <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Sonali Agrahari</h1>
+        <p class="status">📍 India | Open to Internships</p>
+        <h2 class="hero-role">
+           Aspiring Full Stack Developer | B.Tech CSE Student
+        </h2>
+        <p class="hero-tagline">
+            Passionate about building scalable and user-friendly web applications.
+        </p>
+        <div class="hero-buttons">
+            <a href="{% url 'projects' %}" class="btn btn-primary">Explore My Work</a>
+            <a href="{% url 'contact' %}" class="btn btn-outline">Contact Me</a>
+        </div>
+    </div>
+    <div class="hero-avatar">
+        <div class="avatar-circle">
+            <!-- REPLACE this emoji with your photo using <img> tag if you want -->
+            <img src="{% static 'portfolio/images/myphoto.jpeg' %}" alt="Sonali" class="avatar-img">
+      
+        </div>
+        <div class="floating-badge badge-1">Python</div>
+        <div class="floating-badge badge-2">Django</div>
+        <div class="floating-badge badge-3">React</div>
+
+    </div>
+</section>
+
+<section class="highlights">
+    <div class="highlight-card">
+        <i class="fas fa-code"></i>
+        <h3>3+</h3>      
+        <p>Projects Done</p>
+    </div>
+    <div class="highlight-card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>B.Tech</h3>    
+        <p>Computer Science</p> 
+    </div>
+    <div class="highlight-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>India</h3>      
+        <p>Based In</p>
+    </div>
+</section>
+
+{% endblock %}

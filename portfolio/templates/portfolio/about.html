@@ -1,0 +1,49 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="page-hero">
+    <h1>About <span class="highlight-title">Me</span></h1>
+    <p>A little about who I am and what I do</p>
+</section>
+
+<section class="about-grid">
+    <div class="about-text">
+        <h2>Who am I?</h2>
+        <p>
+        Hi! I'm Sonali Agrahari, an aspiring Full Stack Developer from India. I specialize in building modern, responsive, and user-friendly web applications using Django and front-end technologies.
+        </p>
+
+        <p>
+        I am currently pursuing my B.Tech in Computer Science and continuously improving my skills in both frontend and backend development. I enjoy solving real-world problems through code and exploring new technologies.
+        </p>
+        <div class="info-grid">
+            <div><strong>Name:</strong> Sonali Agrahari</div>
+            <div><strong>Email:</strong> sonaliagrahari817@gmail.com</div>    
+            <div><strong>Phone:</strong> +91 9120929697</div>   
+            <div><strong>City:</strong> Lucknow, UP</div>    
+            <div><strong>Degree:</strong> B.Tech CSE</div>       
+            <div><strong>Available:</strong> For Internship</div> 
+        </div>
+       <a href="{% static 'portfolio/resume.pdf' %}" class="btn btn-primary" download>
+       <i class="fas fa-download"></i> Download Resume
+       </a>
+    </div>
+
+    <div class="skills-section">
+        <h2>My Skills</h2>
+        {% for skill in skills %}
+        <div class="skill-item">
+            <div class="skill-header">
+                <span>{{ skill.name }}</span>
+                <span>{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: {{ skill.level }}%"></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
